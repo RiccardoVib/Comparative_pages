@@ -121,11 +121,24 @@ Analog electronic circuits are at the core of an important category of musical d
   <div class="hero-body">
         <div class="columns is-centered has-text-centered">
     <div class="container">
-  <h2 class="title is-3">Audio Examples</h2>
-<img src="static/images/DelaySTFT.png" alt="STFT" width="1000"  height="1000" class="center">
-        <p>Normalized spectrograms of 5 seconds included in the test sets. Targets (top) against C (left), T (middle), and P
-(right) models, and against CT, TP, CP, and CTP models conditioned as C, as T, and as P, respectively.
+  <h2 class="title is-3">Datasets</h2>
+<a href="https://doi.org/10.34740/kaggle/dsv/8968326"> Behringer OD300 overdrive pedal, Behringer Neutron’s overdrive module, Behringer Neutron’s filter module, Helper Saturator and Universal Audio Pultec EQ   |
+<a href="https://doi.org/10.34740/kaggle/dsv/8968089">TubeTech CL 1B & Teletronix LA-2A Dataset </a>
+      </div>
+    </div>
+     </div>
+ </section>
+  
+<section class="hero is-small is-light">
+  <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+    <div class="container">
+  <h2 class="title is-3">TubeTech CL 1B - ED (Light) Audio Examples</h2>
+      <p>Attack Time: 150 ms, Release Time: 0,005 s, Ratio 6:1, Threshold -20dBu.
            </p>
+ <div class="container">
+    <img src="static/images/STFTCL1B-ED2_3.png" alt="STFT" style="width:30%">
+    <img src="static/images/timeCL1B-ED2_3.png" alt="time" style="width:30%">
       </div>
     </div>
      </div>
@@ -139,280 +152,604 @@ Analog electronic circuits are at the core of an important category of musical d
      <!-- Your audio here -->
         <table align="left" id="myTable">
   <tr> 
-            <th align="center" >Input (Compressor)</th> 
-            <th align="center" >Input (Tape Delay)</th> 
-            <th align="center" >Input (Preampflier)</th> 
+            <th align="center" >Input</th> 
+            <th align="center" >Target</th> 
+            <th align="center" >Prediciton</th> 
 </tr>
   <tr>
-  <td> <audio controls unmuted><source src="static/Audio/0_inpC.wav" type="audio/wav"> </audio></td>
-    <td> <audio controls unmuted><source src="static/Audio/0_inpT.wav" type="audio/wav"> </audio></td>
-    <td> <audio controls unmuted><source src="static/Audio/0_inpP.wav" type="audio/wav"> </audio></td>
+  <td> <audio controls unmuted><source src="static/Audio/0_ED_inp.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/3_ED_tar.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/CL1B-ED2_3_pred.wav" type="audio/wav"> </audio></td>
     </tr>
-</table>
-   <table align="left" id="myTable">
-  <tr> 
-            <th align="center" >Targets (Compressor)</th> 
-            <th align="center" >Targets (Tape Delay)</th> 
-            <th align="center" >Targets (Preampflier)</th> 
-    </tr> 
-<tr>
-    <td> <audio controls unmuted><source src="static/Audio/0_tarC.wav" type="audio/wav"> </audio></td>
-<td> <audio controls unmuted><source src="static/Audio/0_tarT.wav" type="audio/wav"> </audio></td>
-  <td> <audio controls unmuted><source src="static/Audio/0_tarP.wav" type="audio/wav"> </audio></td>
-</tr>
-</table>
-      <table align="left" id="myTable">
-  <tr> 
-            <th align="center" >Prediciton C model</th> 
-            <th align="center" >Prediciton T model</th> 
-            <th align="center" >Prediciton P model </th> 
-    </tr> 
-<tr>
-         <td> <audio controls unmuted><source src="static/Audio/0_predC.wav" type="audio/wav"> </audio></td>
-<td> <audio controls unmuted><source src="static/Audio/0_predT.wav" type="audio/wav"> </audio></td>
-  <td> <audio controls unmuted><source src="static/Audio/0_predP.wav" type="audio/wav"> </audio></td>
-</tr>
-</table>
-      <table align="left" id="myTable">
-  <tr> 
-            <th align="center" >Prediciton CP model (as C)</th> 
-            <th align="center" >Prediciton CT model (as T)</th> 
-            <th align="center" >Prediciton TP model (as P)</th> 
-    </tr> 
-<tr>
-         <td> <audio controls unmuted><source src="static/Audio/C_predCP.wav" type="audio/wav"> </audio></td>
-<td> <audio controls unmuted><source src="static/Audio/T_predCT.wav" type="audio/wav"> </audio></td>
-  <td> <audio controls unmuted><source src="static/Audio/P_predTP.wav" type="audio/wav"> </audio></td>
-</tr>
-</table>
-      <table align="left" id="myTable">
-  <tr> 
-            <th align="center" >Prediciton CTP model (as C)</th> 
-            <th align="center" >Prediciton CTP model (as T)</th> 
-            <th align="center" >Prediciton CTP model (as P)</th> 
-    </tr> 
-<tr>
-         <td> <audio controls unmuted><source src="static/Audio/C_predCTP.wav" type="audio/wav"> </audio></td>
-<td> <audio controls unmuted><source src="static/Audio/T_predCTP.wav" type="audio/wav"> </audio></td>
-  <td> <audio controls unmuted><source src="static/Audio/P_predCTP.wav" type="audio/wav"> </audio></td>
-</tr>
-</table>
+        </table>
     </div>
-  </div>
- </section> 
+     </div>
+       </section>
 
+  
   <section class="hero is-small is-light">
-       <div class="columns is-centered has-text-centered">
   <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
     <div class="container">
-<img src="static/images/EDCL1BPreampInterpolationD1constplot.png" alt="EDCL1BPreampInterpolationD1constplot"  width="300" 
-     height="200">
-    <img src="static/images/EDCL1BTapeInterpolationD1constplot.png" alt="EDCL1BTapeInterpolationD1constplot"  width="300" 
-     height="200" >
-    <img src="static/images/EDTapePreampInterpolationD1constplot.png" alt="EDTapePreampInterpolationD1constplot"  width="300" 
-     height="200" >
-        <p>Waveforms and spectrograms (normalized) of 20 seconds included in the test sets, resulted from the CP (left), CT
-(middle), and TP (right) models when the parameter is 0.5.
+          <p>Attack Time: 0.5 ms, Release Time: 0,005 s, Ratio 10:1, Threshold -20dBu.
            </p>
+ <div class="container">
+    <img src="static/images/STFTCL1B-ED2_1.png" alt="STFT" style="width:30%">
+    <img src="static/images/timeCL1B-ED2_1.png" alt="time" style="width:30%">
       </div>
     </div>
-  </div>
+     </div>
+ </section>
+
+  
+<!-- audio -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+     <!-- Your audio here -->
+        <table align="left" id="myTable">
+  <tr> 
+            <th align="center" >Input</th> 
+            <th align="center" >Target</th> 
+            <th align="center" >Prediciton</th> 
+</tr>
+  <tr>
+  <td> <audio controls unmuted><source src="static/Audio/1_ED_inp.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/1_ED_tar.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/CL1B-ED2_1_pred.wav" type="audio/wav"> </audio></td>
+    </tr>
+        </table>
+          </div>
+     </div>
+       </section>
+  
+  <section class="hero is-small is-light">
+  <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+    <div class="container">
+      <p>Attack Time: 0.5 ms, Release Time: 0,005 s, Ratio 10:1, Threshold -40dBu.
+           </p>
+ <div class="container">
+    <img src="static/images/STFTCL1B-ED2_0.png" alt="STFT" style="width:30%">
+    <img src="static/images/timeCL1B-ED2_0.png" alt="time" style="width:30%">
+      </div>
+    </div>
+     </div>
+ </section>
+
+<!-- audio -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+     <!-- Your audio here -->
+        <table align="left" id="myTable">
+  <tr> 
+            <th align="center" >Input</th> 
+            <th align="center" >Target</th> 
+            <th align="center" >Prediciton</th> 
+</tr>
+  <tr>
+  <td> <audio controls unmuted><source src="static/Audio/0_ED_inp.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/0_ED_tar.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/CL1B-ED2_0_pred.wav" type="audio/wav"> </audio></td>
+    </tr>
+        </table>
+          </div>
+     </div>
+       </section>
+  
+
+  <section class="hero is-small is-light">
+  <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+    <div class="container">
+  <h2 class="title is-3">Teletronix LA-2A - ED (Light) Audio Examples</h2>
+      <p>Mode: Compression, Peak Reduction 80.
+           </p>
+ <div class="container">
+    <img src="static/images/STFTLA2A-ED2_0.png" alt="STFT" style="width:30%">
+    <img src="static/images/timeLA2A-ED2_0.png" alt="time" style="width:30%">
+      </div>
+    </div>
+     </div>
+ </section>
+
+  
+<!-- audio -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+     <!-- Your audio here -->
+        <table align="left" id="myTable">
+  <tr> 
+            <th align="center" >Input</th> 
+            <th align="center" >Target</th> 
+            <th align="center" >Prediciton</th> 
+</tr>
+  <tr>
+  <td> <audio controls unmuted><source src="static/Audio/0_LA2A_inp.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/0_LA2A_tar.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/LA2A-ED2_0_pred.wav" type="audio/wav"> </audio></td>
+    </tr>
+        </table>
+    </div>
+     </div>
+       </section>
+  
+  <section class="hero is-small is-light">
+  <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+    <div class="container">
+          <p>Mode: Compression, Peak Reduction 80.
+           </p>
+ <div class="container">
+    <img src="static/images/STFTLA2A-ED2_2.png" alt="STFT" style="width:30%">
+    <img src="static/images/timeLA2A-ED2_2.png" alt="time" style="width:30%">
+      </div>
+    </div>
+     </div>
+ </section>
+
+  
+<!-- audio -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+     <!-- Your audio here -->
+        <table align="left" id="myTable">
+  <tr> 
+            <th align="center" >Input</th> 
+            <th align="center" >Target</th> 
+            <th align="center" >Prediciton</th> 
+</tr>
+  <tr>
+  <td> <audio controls unmuted><source src="static/Audio/2_LA2A_inp.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/2_LA2A_tar.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/LA2A-ED2_2_pred.wav" type="audio/wav"> </audio></td>
+    </tr>
+        </table>
+          </div>
+     </div>
+       </section>
+  
+  <section class="hero is-small is-light">
+  <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+    <div class="container">
+      <p>Mode: Compression, Peak Reduction 80.
+           </p>
+ <div class="container">
+    <img src="static/images/STFTLA2A-ED2_3.png" alt="STFT" style="width:30%">
+    <img src="static/images/timeLA2A-ED2_3.png" alt="time" style="width:30%">
+      </div>
+    </div>
+     </div>
  </section>
   
+<!-- audio -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
+     <!-- Your audio here -->
         <table align="left" id="myTable">
   <tr> 
-     <th align="center" > </th> 
-     <th align="center" >Input</th> 
-     <th align="center" > </th> 
-  </tr>
-  <tr> 
-    <td> <audio controls unmuted><source src="static/Audio/const_inpCP.wav" type="audio/wav"> </audio></td>
-    <td> <audio controls unmuted><source src="static/Audio/const_inpCT.wav" type="audio/wav"> </audio></td>
-    <td> <audio controls unmuted><source src="static/Audio/const_inpTP.wav" type="audio/wav"> </audio></td>
-</tr>
-    <tr>  
-     <th align="center" >Prediction CT</th> 
-    <th align="center" >Prediction CP</th> 
-    <th align="center" >Prediction TP</th> 
+            <th align="center" >Input</th> 
+            <th align="center" >Target</th> 
+            <th align="center" >Prediciton</th> 
 </tr>
   <tr>
-    <td> <audio controls unmuted><source src="static/Audio/const_predCP.wav" type="audio/wav"> </audio></td>
-    <td> <audio controls unmuted><source src="static/Audio/const_predCT.wav" type="audio/wav"> </audio></td>
-    <td> <audio controls unmuted><source src="static/Audio/const_predTP.wav" type="audio/wav"> </audio></td>
+  <td> <audio controls unmuted><source src="static/Audio/3_LA2A_inp.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/3_LA2A_tar.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/LA2A-ED2_3_pred.wav" type="audio/wav"> </audio></td>
     </tr>
-</table>
-      </div>
-    </div>
- </section>
+        </table>
+          </div>
+     </div>
+       </section>
 
 
-  <section class="hero is-small is-light">
-       <div class="columns is-centered has-text-centered">
+    <section class="hero is-small is-light">
   <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
     <div class="container">
-<img src="static/images/EDCL1BPreampInterpolationD1sineplot.png" alt="EDCL1BPreampInterpolationD1sineplot"  width="300" 
-     height="200">
-    <img src="static/images/EDCL1BTapeInterpolationD1sineplot.png" alt="EDCL1BTapeInterpolationD1sineplot"  width="300" 
-     height="200" >
-    <img src="static/images/EDTapePreampInterpolationD1sineplot.png" alt="EDTapePreampInterpolationD1sineplot"  width="300" 
-     height="200" >
-        <p>Normalized spectrograms of a 20 second signal resulted from the CP (left), CT (middle), and TP (right) models
-when the parameter is continuously changed by modulating it using a sine wave at 0.05 Hz.
+  <h2 class="title is-3">TubeTech CL 1B - ED Audio Examples</h2>
+      <p>Attack Time: 0.5 ms, Release Time: 0,005 s, Ratio 10:1, Threshold -20dBu.
            </p>
+ <div class="container">
+    <img src="static/images/STFTCL1B-ED_1.png" alt="STFT" style="width:30%">
+    <img src="static/images/timeCL1B-ED_1.png" alt="time" style="width:30%">
       </div>
     </div>
-  </div>
+     </div>
  </section>
+
   
+<!-- audio -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
+     <!-- Your audio here -->
         <table align="left" id="myTable">
   <tr> 
-     <th align="center" > </th> 
-     <th align="center" >Input</th> 
-     <th align="center" > </th> 
-  </tr>
+            <th align="center" >Input</th> 
+            <th align="center" >Target</th> 
+            <th align="center" >Prediciton</th> 
+</tr>
+  <tr>
+  <td> <audio controls unmuted><source src="static/Audio/CL1B_1_ED_inp.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/CL1B_1_ED_tar.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/CL1B_1_ED_pred.wav" type="audio/wav"> </audio></td>
+    </tr>
+        </table>
+    </div>
+     </div>
+       </section>
+  
+  <section class="hero is-small is-light">
+  <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+    <div class="container">
+  <p>Attack Time: 150 ms, Release Time: 0,005 s, Ratio 6:1, Threshold -20dBu.
+           </p>
+ <div class="container">
+    <img src="static/images/STFTCL1B-ED_3.png" alt="STFT" style="width:30%">
+    <img src="static/images/timeCL1B-ED_3.png" alt="time" style="width:30%">
+      </div>
+    </div>
+     </div>
+ </section>
+
+  
+<!-- audio -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+     <!-- Your audio here -->
+        <table align="left" id="myTable">
   <tr> 
-    <td> </td>
-    <td> <audio controls unmuted><source src="static/Audio/sine_inpCT.wav" type="audio/wav"> </audio></td>
-    <td> </td>
-</tr>
-</tr>
-    <tr>  
-     <th align="center" >Prediction CT</th> 
-    <th align="center" >Prediction CP</th> 
-    <th align="center" >Prediction TP</th> 
+            <th align="center" >Input</th> 
+            <th align="center" >Target</th> 
+            <th align="center" >Prediciton</th> 
 </tr>
   <tr>
-    <td> <audio controls unmuted><source src="static/Audio/sine_predCP.wav" type="audio/wav"> </audio></td>
-    <td> <audio controls unmuted><source src="static/Audio/sine_predCT.wav" type="audio/wav"> </audio></td>
-    <td> <audio controls unmuted><source src="static/Audio/sine_predTP.wav" type="audio/wav"> </audio></td>
+  <td> <audio controls unmuted><source src="static/Audio/CL1B_3_ED_inp.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/CL1B_3_ED_tar.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/CL1B_4_ED_pred.wav" type="audio/wav"> </audio></td>
     </tr>
-</table>
-      </div>
+        </table>
     </div>
- </section>
-
-  <section class="hero is-small is-light">
-       <div class="columns is-centered has-text-centered">
-  <div class="hero-body">
-    <div class="container">
-<img src="static/images/EDCL1BTapePreampCTP3Interpolation5plot.png" alt="EDCL1BTapePreampCTP3Interpolation5plot"  width="300" 
-     height="200">
-    <img src="static/images/EDCL1BTapePreampCTP3Interpolation6plot.png" alt="EDCL1BTapePreampCTP3Interpolation6plot"  width="300" 
-     height="200" >
-    <img src="static/images/EDCL1BTapePreampCTP3Interpolation7plot.png" alt="EDCL1BTapePreampCTP3Interpolation7plot"  width="300" 
-     height="200" >
-        <img src="static/images/EDCL1BTapePreampCTP3Interpolation8plot.png" alt="EDCL1BTapePreampCTP3Interpolation8plot"  width="300" 
-     height="200" >
-        <p>Waveforms and normalized spectrograms of a 20 second signal resulted from the CTP model when the parameter
-is [0.3, 0.3, 0.3] (top-left), [0.5, 0.25, 0.25] (top-right), [0.25, 0.5, 0.25] (bottom-left), and [0.25, 0.25, 0.5] (bottom-right).
-           </p>
-      </div>
-    </div>
-  </div>
- </section>
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-     <div class="columns is-centered has-text-centered">
-    <div class="hero-body">
-        <table align="left" id="myTable">
-</tr>
-    <tr>  
-     <th align="center" >Prediction</th> 
-    <th align="center" > </th> 
-    <th align="center" > </th> 
-</tr>
-  <tr>
-    <td> <audio controls unmuted><source src="static/Audio/5_new2_predCTP.wav" type="audio/wav"> </audio></td>
-    <td> <audio controls unmuted><source src="static/Audio/6_new2_predCTP.wav" type="audio/wav"> </audio></td>
-    <td> <audio controls unmuted><source src="static/Audio/7_new2_predCTP.wav" type="audio/wav"> </audio></td>
-     <td> <audio controls unmuted><source src="static/Audio/8_new2_predCTP.wav" type="audio/wav"> </audio></td>
-    </tr>
-</table>
-      </div>
-    </div>
-    </div>
- </section>
-
-  <section class="hero is-small is-light">
-       <div class="columns is-centered has-text-centered">
-  <div class="hero-body">
-    <div class="container">
-<img src="static/images/EDCL1BTapePreampCTP3Interpolation1plot.png" alt="EDCL1BTapePreampCTP3Interpolation1plot"  width="300" 
-     height="200">
-    <img src="static/images/EDCL1BTapePreampCTP3Interpolation2plot.png" alt="EDCL1BTapePreampCTP3Interpolation2plot"  width="300" 
-     height="200" >
-    <img src="static/images/EDCL1BTapePreampCTP3Interpolation3plot.png" alt="EDCL1BTapePreampCTP3Interpolation3plot"  width="300" 
-     height="200" >
-        <img src="static/images/EDCL1BTapePreampCTP3Interpolation4plot.png" alt="EDCL1BTapePreampCTP3Interpolation4plot"  width="300" 
-     height="200" >
-        <p>Waveforms and normalized spectrograms of a 20 second signal resulted from the CTP model when the parameter
-is [0.0,0.0,0.0] (top-left), [1.0,1.0,1.0] (top-right), [0.5,0.5,0.5] (bottom-left), and [0.3,0.8,0.5] (bottom-right).
-           </p>
-      </div>
-    </div>
-  </div>
- </section>
+     </div>
+       </section>
   
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-    <div class="hero-body">
-        <table align="left" id="myTable">
-</tr>
-    <tr>  
-     <th align="center" >Predictions</th> 
-    <th align="center" > </th> 
-    <th align="center" > </th> 
-</tr>
-  <tr>
-    <td> <audio controls unmuted><source src="static/Audio/1_new2_predCTP.wav" type="audio/wav"> </audio></td>
-    <td> <audio controls unmuted><source src="static/Audio/2_new2_predCTP.wav" type="audio/wav"> </audio></td>
-    <td> <audio controls unmuted><source src="static/Audio/3_new2_predCTP.wav" type="audio/wav"> </audio></td>
-     <td> <audio controls unmuted><source src="static/Audio/4_new2_predCTP.wav" type="audio/wav"> </audio></td>
-    </tr>
-</table>
+        <section class="hero is-small is-light">
+  <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+    <div class="container">
+<p>Attack Time: 0.5 ms, Release Time: 0,005 s, Ratio 2:1, Threshold -40dBu.
+           </p>
+ <div class="container">
+    <img src="static/images/STFTCL1B-ED_4.png" alt="STFT" style="width:30%">
+    <img src="static/images/timeCL1B-ED_4.png" alt="time" style="width:30%">
       </div>
     </div>
-    </div>
+     </div>
  </section>
 
-  <section class="hero is-small is-light">
-       <div class="columns is-centered has-text-centered">
-  <div class="hero-body">
-    <div class="container">
-<img src="static/images/EDCL1BTapePreampCTP3Interpolation_contplot.png" alt="EDCL1BTapePreampCTP3Interpolation_contplot"  width="300" 
-     height="200">
-        <p>Normalized spectrogram of a 20 second music signal produced by the CTP model when the parameter is continuously changed by modulating it using a sine wave at 0.05, 0.07, and 0.09 Hz.
-           </p>
-      </div>
-    </div>
-  </div>
- </section>
   
+<!-- audio -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
+     <!-- Your audio here -->
         <table align="left" id="myTable">
-</tr>
-    <tr>  
-     <th align="center" ></th> 
-    <th align="center" >Predictions</th> 
-    <th align="center" > </th> 
+  <tr> 
+            <th align="center" >Input</th> 
+            <th align="center" >Target</th> 
+            <th align="center" >Prediciton</th> 
 </tr>
   <tr>
-    <td> </td>
-    <td> <audio controls unmuted><source src="static/Audio/0_cont_new2_predCTP.wav" type="audio/wav"> </audio></td>
+  <td> <audio controls unmuted><source src="static/Audio/CL1B_4_ED_inp.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/CL1B_4_ED_tar.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/CL1B_4_ED_pred.wav" type="audio/wav"> </audio></td>
     </tr>
-</table>
+        </table>
+    </div>
+     </div>
+       </section>
+  
+        <section class="hero is-small is-light">
+  <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+    <div class="container">
+  <h2 class="title is-3">Teletronix LA-2A - ED Audio Examples</h2>
+       <p>Mode: Compression, Peak Reduction 80.
+           </p>
+ <div class="container">
+    <img src="static/images/STFTLA2A-ED_1.png" alt="STFT" style="width:30%">
+    <img src="static/images/timeLA2A-ED_1.png" alt="time" style="width:30%">
       </div>
     </div>
+     </div>
  </section>
+
+  
+<!-- audio -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+     <!-- Your audio here -->
+        <table align="left" id="myTable">
+  <tr> 
+            <th align="center" >Input</th> 
+            <th align="center" >Target</th> 
+            <th align="center" >Prediciton</th> 
+</tr>
+  <tr>
+  <td> <audio controls unmuted><source src="static/Audio/LA2A-ED1_inp.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/LA2A-ED1_tar.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/LA2A-ED1_pred.wav" type="audio/wav"> </audio></td>
+    </tr>
+        </table>
+    </div>
+     </div>
+       </section>
+
+        <section class="hero is-small is-light">
+  <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+    <div class="container">
+       <p>Mode: Compression, Peak Reduction 80.
+           </p>
+ <div class="container">
+    <img src="static/images/STFTLA2A-ED_2.png" alt="STFT" style="width:30%">
+    <img src="static/images/timeLA2A-ED_2.png" alt="time" style="width:30%">
+      </div>
+    </div>
+     </div>
+ </section>
+
+  
+<!-- audio -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+     <!-- Your audio here -->
+        <table align="left" id="myTable">
+  <tr> 
+            <th align="center" >Input</th> 
+            <th align="center" >Target</th> 
+            <th align="center" >Prediciton</th> 
+</tr>
+  <tr>
+  <td> <audio controls unmuted><source src="static/Audio/LA2A-ED2_inp.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/LA2A-ED2_tar.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/LA2A-ED2_pred.wav" type="audio/wav"> </audio></td>
+    </tr>
+        </table>
+    </div>
+     </div>
+       </section>
+
+          <section class="hero is-small is-light">
+  <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+    <div class="container">
+       <p>Mode: Compression, Peak Reduction 80.
+           </p>
+ <div class="container">
+    <img src="static/images/STFTLA2A-ED_3.png" alt="STFT" style="width:30%">
+    <img src="static/images/timeLA2A-ED_3.png" alt="time" style="width:30%">
+      </div>
+    </div>
+     </div>
+ </section>
+
+  
+<!-- audio -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+     <!-- Your audio here -->
+        <table align="left" id="myTable">
+  <tr> 
+            <th align="center" >Input</th> 
+            <th align="center" >Target</th> 
+            <th align="center" >Prediciton</th> 
+</tr>
+  <tr>
+  <td> <audio controls unmuted><source src="static/Audio/LA2A-ED3_inp.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/LA2A-ED3_tar.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/LA2A-ED3_pred.wav" type="audio/wav"> </audio></td>
+    </tr>
+        </table>
+    </div>
+     </div>
+       </section>
+
+          <section class="hero is-small is-light">
+  <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+    <div class="container">
+  <h2 class="title is-3">Softube FET - ED Audio Examples</h2>
+             <p>Attack Time: 0.5 ms, Release Time: 0,005 s, Ratio 10:1, Threshold 20
+           </p>
+ <div class="container">
+    <img src="static/images/STFTFET-ED_0.png" alt="STFT" style="width:30%">
+    <img src="static/images/timeFET-ED_0.png" alt="time" style="width:30%">
+      </div>
+    </div>
+     </div>
+ </section>
+
+  
+<!-- audio -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+     <!-- Your audio here -->
+        <table align="left" id="myTable">
+  <tr> 
+            <th align="center" >Input</th> 
+            <th align="center" >Target</th> 
+            <th align="center" >Prediciton</th> 
+</tr>
+  <tr>
+  <td> <audio controls unmuted><source src="static/Audio/0_FET_inp.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/0_FET_tar.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/FET-ED0_pred.wav" type="audio/wav"> </audio></td>
+    </tr>
+        </table>
+    </div>
+     </div>
+       </section>
+
+          <section class="hero is-small is-light">
+  <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+    <div class="container">
+  <h2 class="title is-3">U-he Presswerk - ED Audio Examples</h2>
+           <p>Attack Time: 0.5 ms, Release Time: 0,005 s, Ratio 10:1, Threshold 20
+           </p>
+ <div class="container">
+    <img src="static/images/STFTPRESS-ED_1.png" alt="STFT" style="width:30%">
+    <img src="static/images/timePRESS-ED_1.png" alt="time" style="width:30%">
+      </div>
+    </div>
+     </div>
+ </section>
+
+  
+<!-- audio -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+     <!-- Your audio here -->
+        <table align="left" id="myTable">
+  <tr> 
+            <th align="center" >Input</th> 
+            <th align="center" >Target</th> 
+            <th align="center" >Prediciton</th> 
+</tr>
+  <tr>
+  <td> <audio controls unmuted><source src="static/Audio/1_Press_inp.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/1_Press_tar.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/PRESS-ED1_pred.wav" type="audio/wav"> </audio></td>
+    </tr>
+        </table>
+    </div>
+     </div>
+       </section>
+
+          <section class="hero is-small is-light">
+  <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+    <div class="container">
+  <h2 class="title is-3">PSP MicroComp - ED Audio Examples</h2>
+       <p>Attack Time: 0.5 ms, Release Time: 0,005 s, Ratio 10:1, Threshold 20
+           </p>
+ <div class="container">
+    <img src="static/images/STFTPSP-ED_1.png" alt="STFT" style="width:30%">
+    <img src="static/images/timePSP-ED_1.png" alt="time" style="width:30%">
+      </div>
+    </div>
+     </div>
+ </section>
+
+  
+<!-- audio -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+     <!-- Your audio here -->
+        <table align="left" id="myTable">
+  <tr> 
+            <th align="center" >Input</th> 
+            <th align="center" >Target</th> 
+            <th align="center" >Prediciton</th> 
+</tr>
+  <tr>
+  <td> <audio controls unmuted><source src="static/Audio/1_PSP_inp.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/1_PSP_tar.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/PSP-ED1_pred.wav" type="audio/wav"> </audio></td>
+    </tr>
+        </table>
+    </div>
+     </div>
+       </section>
+
+
+         <section class="hero is-small is-light">
+  <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+    <div class="container">
+  <h2 class="title is-3">TubeTech CL 1B - TCN Audio Examples</h2>
+   <p>Attack Time: 150 ms, Release Time: 0,005 s, Ratio 6:1, Threshold -20dBu.
+           </p>
+ <div class="container">
+    <img src="static/images/STFTCL1B-TCN_3.png" alt="STFT" style="width:30%">
+    <img src="static/images/timeCL1B-TCN_3.png" alt="time" style="width:30%">
+      </div>
+    </div>
+     </div>
+ </section>
+
+  
+<!-- audio -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+     <!-- Your audio here -->
+        <table align="left" id="myTable">
+  <tr> 
+            <th align="center" >Input</th> 
+            <th align="center" >Target</th> 
+            <th align="center" >Prediciton</th> 
+</tr>
+  <tr>
+  <td> <audio controls unmuted><source src="static/Audio/3_TCN_inp.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/3_TCN_tar.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/CL1B-TCN3_pred.wav" type="audio/wav"> </audio></td>
+    </tr>
+        </table>
+    </div>
+     </div>
+       </section>
+
+         <section class="hero is-small is-light">
+  <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+    <div class="container">
+   <p>Attack Time: 150 ms, Release Time: 0,005 s, Ratio 6:1, Threshold -20dBu.
+           </p>
+ <div class="container">
+    <img src="static/images/STFTCL1B-TCN_2.png" alt="STFT" style="width:30%">
+    <img src="static/images/timeCL1B-TCN_2.png" alt="time" style="width:30%">
+      </div>
+    </div>
+     </div>
+ </section>
+
+  
+<!-- audio -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+     <!-- Your audio here -->
+        <table align="left" id="myTable">
+  <tr> 
+            <th align="center" >Input</th> 
+            <th align="center" >Target</th> 
+            <th align="center" >Prediciton</th> 
+</tr>
+  <tr>
+  <td> <audio controls unmuted><source src="static/Audio/2_TCN_inp.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/2_TCN_tar.mp3" type="audio/mp3"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/CL1B-TCN2_pred.wav" type="audio/wav"> </audio></td>
+    </tr>
+        </table>
+    </div>
+     </div>
+       </section>
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
